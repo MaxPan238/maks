@@ -1,0 +1,878 @@
+:root {
+  --green: #284d36;
+  --beige: #f5ebc7;
+  --accent: #d2b97f;
+  --dark: #1a1a1a;
+  --white: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url('background.png') repeat;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #1c77ac;
+  color: #1561ad;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+header {
+  background-color: #1c77ac;
+  color: #1561ad;
+  padding: 20px 0;
+  position: relative;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #1561ad;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #1561ad;
+}
+
+.nav-links.active {
+  display: flex !important;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin-top: 10px;
+  background: var(--green);
+  padding: 10px 0;
+}
+/* Секции */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #1561ad;
+}
+
+/* Галерея */
+.gallery-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.gallery-slider {
+  display: flex;
+  overflow-x:hidden;
+  gap: 20px;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.gallery-card {
+  flex: 0 0 calc(33.333% - 20px);
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+  min-width: 280px;
+  max-width: 100%;
+}
+
+.gallery-card:hover {
+  transform: translateY(-5px);
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.gallery-card h1 {
+  font-size: 1.2rem;
+  margin: 8px 0;
+  color: #1561ad;
+}
+
+.gallery-card p.p1 {
+  font-size: 1rem;
+  color: #1561ad;
+  margin-bottom: 10px;
+}
+
+.but {
+  background-color: #fc5226;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.but:hover {
+   background-color: #e14b1f;
+}
+
+/* Кнопки стрелок для галереи и отзывов */
+.arrow {
+  background-color: #1c77ac;
+  color: #1561ad;
+  border: none;
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.arrow:hover {
+  background-color: #1c77ac;
+}
+
+.arrow.left {
+  left: -30px;
+}
+
+.arrow.right {
+  right: -30px;
+}
+/* Отзывы */
+/* Контейнер отзывов */
+/* Секция отзывов */
+#reviews {
+  background: transparent;
+  padding: 4rem 1rem;
+}
+
+#reviews h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  color: #1561ad;
+}
+
+/* Сетка отзывов */
+.reviews-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Отключаем стрелки, если остались */
+.reviews-wrapper .arrow {
+  display: none;
+}
+
+/* Обёртка слайдера не нужна */
+.reviews-slider {
+  display: contents;
+}
+
+/* Карточка отзыва */
+.review-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.review-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+/* Фото пользователя */
+.review-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #ddd;
+  margin-bottom: 1rem;
+}
+
+/* Текст отзыва */
+.review-card p {
+  font-size: 1rem;
+  color: #444;
+  font-style: italic;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* Имя пользователя */
+.review-card h4 {
+  font-size: 1.1rem;
+  color: #1561ad;
+  font-weight: 600;
+  margin: 0;
+}
+
+
+/* Форма */
+form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input[type="text"],
+form input[type="tel"] {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+form button {
+  background: var(--green);
+  color: #1561ad;
+  border: none;
+  padding: 12px;
+  border-radius: 30px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: var(--accent);
+}
+
+/* Контакты */
+#contacts iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  margin-top: 20px;
+  border-radius: 15px;
+}
+
+.whatsapp-btn {
+  display: inline-block;
+  margin-top: 15px;
+  background: #25d366;
+  color: #1561ad;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  background: #1ebe57;
+}
+
+/* Футер */
+footer {
+  background: var(--green);
+  color: #1561ad;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+}
+
+/* Custom Header Styles */
+.custom-header {
+  background: linear-gradient(to bottom right, #245530, #1f3f2a);
+  color: #1561ad;
+  padding: 1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.custom-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.custom-nav .logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1561ad;
+}
+
+.custom-nav .menu {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.custom-nav .menu li {
+  font-size: 0.9rem;
+}
+
+.custom-nav .lang {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.apply-btn {
+  background: #f0d887;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.hero-content {
+  margin-top: 2rem;
+  max-width: 800px;
+}
+
+.hero-content h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #1561ad;
+}
+
+.hero-content p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #1561ad;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.whatsapp-btn {
+  background: #4CAF50;
+  color: #1561ad;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.calculate-btn {
+  background: #f0d887;
+  color: #1561ad;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.kaspi-badge {
+  background: #f44336;
+  color: #1561ad;
+  padding: 1rem;
+  border-radius: 15px;
+  max-width: 250px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+/* Custom header styles */
+
+header {
+  background: linear-gradient(to bottom, #1561ad, #1c77ac);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+header nav {
+  display: flex;
+  gap: 20px;
+  font-size: 16px;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+header nav a:hover {
+  color: #1dbab4;
+}
+
+header .cta-button {
+  background-color: #fc5226;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+header .cta-button:hover {
+  background-color: #d8431f;
+}
+
+
+/* Refined Header Styling */
+header {
+  background: linear-gradient(to bottom, #1561ad, #1c77ac);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 18px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #1dbab4;
+}
+
+.cta-button {
+  background-color: #fc5226;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e14b1f;
+}
+.btn{
+  background-color: #fc5226;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+   background-color: #e14b1f;
+}
+
+/* Стили секции "О нас" */
+.about-section {
+  padding: 60px 20px;
+  background: transparent;
+  text-align: center;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-card {
+  background-color: #1c77ac;
+  color: white;
+  padding: 25px 20px;
+  border-radius: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.about-card h3 {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.about-card p {
+  font-size: 15px;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+.request-form {
+  background:transparent;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  width: 150vh;
+  position: relative;
+  left: 200px;
+}
+
+.request-form__container {
+  background-color: transparent;
+  max-width: 1100px;
+  width: 100%;
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.request-form__text {
+  flex: 1 1 45%;
+  background-color: transparent;
+  color: #f7e6b6;
+  padding: 40px 30px;
+}
+
+.request-form__text h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.request-form__text .subtitle {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.request-form__text .info {
+  font-size: 18px;
+  color: #fff;
+}
+
+.request-form__text .info span {
+  font-weight: 700;
+  border-bottom: 2px solid #fff;
+}
+
+.request-form__form {
+  flex: 1 1 55%;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 30px;
+  background-color: transparent
+}
+
+.request-form__form input {
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+}
+
+.request-form__form input:focus {
+  outline: 2px solid #2d5834;
+}
+
+.request-form__form .policy {
+  font-size: 14px;
+  color: #2d5834;
+  margin: 10px 0 20px;
+}
+
+.request-form__form .policy a {
+  color: #2d5834;
+  text-decoration: underline;
+}
+
+.request-form__form button {
+  background-color: #f78f53;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.request-form__form button:hover {
+  background-color: #e26e33;
+}
+.contacts-section {
+  background: transparent;
+  padding: 4rem 1rem;
+}
+
+.contacts-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.contact-info {
+  background: #fff;
+  flex: 1 1 350px;
+  padding: 2rem;
+  border-radius: 24px 0 0 24px;
+}
+
+.contact-info h2 {
+  color:#1561ad;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+  font-size: 1rem;
+  color: #333;
+  margin: 1rem 0;
+}
+
+.contact-info a {
+  color:#1561ad;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.social-icon {
+  width: 28px;
+  height: 28px;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  transition: transform 0.2s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.15);
+}
+
+.contact-map {
+  flex: 2 1 700px;
+   min-height: 0;
+  height: auto;
+  border-radius: 0 24px 24px 0;
+  overflow: hidden
+}
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--green);
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex !important;
+  }
+
+  .nav-links a {
+    color: white;
+    padding: 10px 20px;
+    width: 100%;
+  }
+
+  header {
+    padding: 10px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cta-button {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .gallery-card {
+    flex: 0 0 100%;
+  }
+
+  .reviews-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .request-form {
+    flex-direction: column;
+    padding: 40px 20px;
+    width: 100%;
+    left: 0;
+  }
+
+  .request-form__container {
+    flex-direction: column;
+    border-radius: 15px;
+  }
+
+  .request-form__text,
+  .request-form__form {
+    flex: 1 1 100%;
+    padding: 20px;
+  }
+
+  .contacts-container {
+    flex-direction: column;
+    border-radius: 20px;
+  }
+
+  .contact-info {
+    border-radius: 20px 20px 0 0;
+  }
+
+  .contact-map {
+    border-radius: 0 0 20px 20px;
+    min-height: 0;
+    height: auto;
+  }
+}
+/* Бургер и адаптация навигации */
+.burger {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #1c77ac !important;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 20px;
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  header {
+    flex-wrap: wrap;
+  }
+
+  .cta-button {
+    margin-left: auto;
+    margin-top: 10px;
+  }
+}
+
