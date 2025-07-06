@@ -962,7 +962,7 @@ input[type="tel"] {
   background-image: url(avatars/teppichreinigung.jpg);
   position: relative;
   width: 100%;
-  bottom: 82px;
+  bottom: 95px;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -971,5 +971,5 @@ input[type="tel"] {
 .heros{
   position: relative;
   top: 200px;
-  margin-left: 50px;
+  margin-left: 20px;
 }
