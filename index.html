@@ -16,8 +16,8 @@
 
 <header>
   <div class="logo">
-    <img src="img/logo.png" alt="Logo" />
-    <span class="logo-text">Lavellea</span>
+    <img src="img/logo.png" alt="" />
+    <span class="logo-text">Iceclean</span>
   </div>
 
   <!-- Бургер кнопка -->
@@ -25,26 +25,34 @@
 
   <!-- Навигация -->
   <nav class="nav-links" id="navMenu">
-    <a href="#">Главная</a>
-    <a href="#">О нас</a>
-    <a href="#">Услуги</a>
-    <a href="#">Процесс</a>
-    <a href="#">Цены</a>
+    <a href="#hero">Главная</a>
+    <a href="#about">О нас</a>
+    <a href="#gallery">Услуги</a>
+    <a href="#services-pricing">Цены</a>
     <a href="#reviews">Отзывы</a>
     <a href="#contacts">Контакты</a>
   </nav>
 
-  <button class="cta-button">Оставить заявку</button>
+  <a style="text-decoration: none;" href="#request-form" class="cta-button">Оставить заявку</a>
 </header>
-
-
-
-
-  <main>
-    <section id="hero" class="section overlay" data-aos="fade-up">
-      <h2>Профессиональная чистка ковров в Алматы</h2>
-      <p>Чисто. Надежно. С гарантией.</p>
+    <section class="hero" data-aos="fade-up">
+      <div class="heros">
+        <h2>Профессиональная чистка ковров в Алматы</h2>
+        <p>Чисто. Надежно. С гарантией.</p>
+      </div>
     </section>
+<div class="quiz-container">
+  <div id="question-step">
+    <!-- Вопросы будут подставляться сюда -->
+  </div>
+
+  <div class="buttons">
+    <button id="backBtn" class="nav-btn">Назад</button>
+    <button id="nextBtn" class="nav-btn">Следующий вопрос</button>
+  </div>
+</div>
+
+
     <section id="about" class="about-section">
   <div class="about-container">
     <div class="about-card"><h3>СОВРЕМЕННОЕ ОБОРУДОВАНИЕ</h3><p>Мы используем передовое оборудование для бережной и глубокой чистки.</p></div>
@@ -112,7 +120,7 @@
 
     
 
-    <section class="services-pricing" style="padding: 60px 20px; background: transparent">
+    <section  id="services-pricing" class="services-pricing" style="padding: 60px 20px; background: transparent">
   <div style="max-width: 1200px; margin: 0 auto;">
     <h2 style="text-align: center; font-size: 32px; color: #1561ad; margin-bottom: 40px;">Услуги и стоимость</h2>
 
@@ -162,7 +170,7 @@
   </div>
 </section>
 
-    <section class="request-form">
+    <section id="request-form" class="request-form">
   <div class="request-form__container">
     <div class="request-form__text">
       <h2>Оставьте заявку</h2>
@@ -190,32 +198,32 @@
     <button class="arrow left" onclick="scrollReviews(-1)">&#10094;</button>
     <div class="reviews-slider" id="reviewsSlider">
       <div class="review-card">
-        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Айгерим" />
+        <img src="avatars/a1.png" alt="Айгерим" />
         <p>"Ковер стал как новый! Спасибо за быструю доставку."</p>
         <h4>Айгерим</h4>
       </div>
       <div class="review-card">
-        <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Тимур" />
+        <img src="avatars/a2.jpg" alt="Тимур" />
         <p>"Очень доволен сервисом. Всё качественно и аккуратно."</p>
         <h4>Тимур</h4>
       </div>
       <div class="review-card">
-        <img src="https://randomuser.me/api/portraits/men/35.jpg" alt="Данияр" />
+        <img src="avatars/a3.jpg" alt="Данияр" />
         <p>"Уже второй раз обращаюсь, всегда на высоте."</p>
         <h4>Данияр</h4>
       </div>
       <div class="review-card">
-        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Марина" />
+        <img src="avatars/a4.png" alt="Марина" />
         <p>"Забрали ковер вовремя, доставили как новенький."</p>
         <h4>Марина</h4>
       </div>
       <div class="review-card">
-        <img src="https://randomuser.me/api/portraits/men/47.jpg" alt="Руслан" />
+        <img src="avatars/a5.jpg" alt="Руслан" />
         <p>"Пятна исчезли полностью, запах тоже. Просто супер!"</p>
         <h4>Руслан</h4>
       </div>
       <div class="review-card">
-        <img src="https://randomuser.me/api/portraits/women/58.jpg" alt="Жанна" />
+        <img src="avatars/a6.jpg" alt="Жанна" />
         <p>"Сделали в срок, сотрудники вежливые. Буду заказывать ещё."</p>
         <h4>Жанна</h4>
       </div>
