@@ -253,13 +253,13 @@ background-color: #e14b1f;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    background-color: transparent;
   }
 
   .price-row {
     background: #fff;
     border-radius: 10px;
     padding: 20px 15px;
-    text-align: center;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     display: flex;
     flex-direction: row;
