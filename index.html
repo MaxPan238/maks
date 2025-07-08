@@ -13,34 +13,53 @@
 </head>
 <body>
   
-
-<header>
+<div class="bckg">
+<header class="main-header">
   <div class="logo">
-    <img src="img/logo.png" alt="" />
+    <img src="avatars/ChatGPT Image 8 июл. 2025 г., 14_33_44.png" alt="" />
     <span class="logo-text">Iceclean</span>
   </div>
 
-  <!-- Бургер кнопка -->
-  <div class="burger" id="burger">&#9776;</div>
+  <!-- Бургер -->
+  <div class="burger" id="burger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
   <!-- Навигация -->
-  <nav class="nav-links" id="navMenu">
-    <a href="#hero">Главная</a>
+  <nav class="n-links" id="navMenu">
+    <a href="#carpet-cleaning-banner">Главная</a>
     <a href="#about">О нас</a>
-    <a href="#gallery">Услуги</a>
-    <a href="#services-pricing">Цены</a>
+    <a href="#price-list">Цены</a>
     <a href="#reviews">Отзывы</a>
     <a href="#contacts">Контакты</a>
   </nav>
-
-  <a style="text-decoration: none;" href="#request-form" class="cta-button">Оставить заявку</a>
 </header>
-    <section class="hero" data-aos="fade-up">
-      <div class="heros">
-        <h2>Профессиональная чистка ковров в Алматы</h2>
-        <p>Чисто. Надежно. С гарантией.</p>
-      </div>
-    </section>
+    <section id="carpet-cleaning-banner" class="carpet-cleaning-banner">
+  <div class="banner-content">
+    <h1>Настоящая стирка<br>ковров на фабрике</h1>
+    <ul class="features">
+      <li>
+        <span class="icon">📍</span>
+        Все виды чистки ковров и ковровых изделий в Алматы
+      </li>
+      <li>
+        <span class="icon">🚚</span>
+        При заказе от 6000 тенге доставка бесплатно
+      </li>
+      <li>
+        <span class="icon">🎖️</span>
+        Удаляем 99% пятен с гарантией
+      </li>
+    </ul>
+    <div class="price-order">
+      <span class="price">от <strong>450 тг</strong> / м<sup>2</sup></span>
+      <a href="#request-form" class="order-btn">Заказать чистку ковра</a>
+    </div>
+  </div>
+</section>
+</div>
 <div class="quiz-container">
   <div id="question-step">
     <!-- Вопросы будут подставляться сюда -->
@@ -66,109 +85,54 @@
   </div>
 </section>
 
-    <section id="gallery" class="section overlay" data-aos="fade-up">
-      <h2>Галерея</h2>
-      <div class="gallery-wrapper">
-        <button class="arrow left" onclick="scrollGallery(-1)">&#10094;</button>
-        <div class="gallery-slider" id="gallerySlider">
-          <div class="gallery-card">
-            <h1>от 1 000 ₸ за м2</h1>
-            <img src="https://avatars.mds.yandex.net/i?id=fe41a7918461d3bafb87ed7d0e201ee0_l-5023294-images-thumbs&n=13" alt="Ковер 1" />
-            <h1>Материал</h1>
-            <p class="p1">Материал</p>
-            <button class="but">Подробнее</button>
-          </div>
-          <div class="gallery-card">
-            <h1>от 1 200 ₸ за м2</h1>
-            <img src="https://avatars.mds.yandex.net/i?id=45348f18797c25b6612e1f23028844cc_l-5502383-images-thumbs&n=13" alt="Ковер 2" />
-            <h1>Материал</h1>
-            <p class="p1">Материал</p>
-            <button class="but">Подробнее</button>
-          </div>
-          <div class="gallery-card">
-            <h1>от 1 100 ₸ за м2</h1>
-            <img src="https://www.greatmats.com/images/carpet-tiles-ks/comfort-carpet-tile-navy-texture.jpg" alt="Ковер 3" />
-            <h1>Материал</h1>
-            <p class="p1">Материал</p>
-            <button class="but">Подробнее</button>
-          </div>
-          <div class="gallery-card">
-            <h1>от 1 300 ₸ за м2</h1>
-            <img src="https://permkvartal.ru/upload/iblock/3c3/3c3e6257e645d64b8d03ac63d4479e99.jpeg" alt="Ковер 4" />
-            <h1>Материал</h1>
-            <p class="p1">Материал</p>
-            <button class="but">Подробнее</button>
-          </div>
-          <div class="gallery-card">
-            <h1>от 1 150 ₸ за м2</h1>
-            <img src="https://avatars.mds.yandex.net/i?id=e56575370c95109ca536af965c121392_l-5233063-images-thumbs&n=13" alt="Ковер 5" />
-            <h1>Материал</h1>
-            <p class="p1">Материал</p>
-            <button class="but">Подробнее</button>
-          </div>
-          <div class="gallery-card">
-            <h1>от 1 050 ₸ за м2</h1>
-            <img src="https://avatars.mds.yandex.net/i?id=412341aec84efd314775b6fb058ea873_l-3727509-images-thumbs&n=13" alt="Ковер 6" />
-            <h1>Материал</h1>
-            <p class="p1">Материал</p>
-            <button class="but">Подробнее</button>
-          </div>
-        </div>
-        <button class="arrow right" onclick="scrollGallery(1)">&#10095;</button>
-      </div>
-    </section>
+   <section id="price-list" class="price-list">
+  <h2>ПРИЯТНЫЙ ПРАЙС-ЛИСТ</h2>
 
-    
+  <div class="price-table">
+    <div class="price-row header">
+      <div>Услуга</div>
+      <div>Самовывоз</div>
+      <div>Доставка</div>
+    </div>
 
-    <section  id="services-pricing" class="services-pricing" style="padding: 60px 20px; background: transparent">
-  <div style="max-width: 1200px; margin: 0 auto;">
-    <h2 style="text-align: center; font-size: 32px; color: #1561ad; margin-bottom: 40px;">Услуги и стоимость</h2>
+    <div class="price-row">
+      <div><img src="img1.jpg" alt="">Синтетический ковер</div>
+      <div>450 тг / м²</div>
+      <div>600 тг / м²</div>
+    </div>
 
-    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-      <!-- Card 1 -->
-      <div style="background: #ffffff; border-radius: 16px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); padding: 24px; width: 280px;">
-        <h3 style="font-size: 20px; color: #1561ad;">Чистка шерстяных ковров</h3>
-        <p style="margin-top: 10px; color: #444;">Глубокая очистка натуральных ковров с деликатным подходом.</p>
-        <strong style="display: block; margin-top: 12px; color: #1561ad;">от 800 тг/м²</strong>
-      </div>
+    <div class="price-row">
+      <div><img src="img2.jpg" alt="">Шелковый ковер</div>
+      <div>700 тг / м²</div>
+      <div>800 тг / м²</div>
+    </div>
 
-      <!-- Card 2 -->
-      <div style="background: #ffffff; border-radius: 16px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); padding: 24px; width: 280px;">
-        <h3 style="font-size: 20px; color: #1561ad;">Синтетические ковры</h3>
-        <p style="margin-top: 10px; color: #444;">Быстрая и безопасная стирка синтетических покрытий.</p>
-        <strong style="display: block; margin-top: 12px; color: #1561ad;">от 600 тг/м²</strong>
-      </div>
+    <div class="price-row">
+      <div><img src="img3.jpg" alt="">Шерстяной ковер</div>
+      <div>550 тг / м²</div>
+      <div>700 тг / м²</div>
+    </div>
 
-      <!-- Card 3 -->
-      <div style="background: #ffffff; border-radius: 16px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); padding: 24px; width: 280px;">
-        <h3 style="font-size: 20px; color: #1561ad;;">Выведение пятен</h3>
-        <p style="margin-top: 10px; color: #444;">Удаление сложных загрязнений и пятен любого происхождения.</p>
-        <strong style="display: block; margin-top: 12px; color: #1561ad;;">от 500 тг</strong>
-      </div>
+    <div class="price-row">
+      <div><img src="img4.jpg" alt="">Грязезащитный (резина)</div>
+      <div>650 тг / м²</div>
+      <div>750 тг / м²</div>
+    </div>
 
-      <!-- Card 4 -->
-      <div style="background: #ffffff; border-radius: 16px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); padding: 24px; width: 280px;">
-        <h3 style="font-size: 20px; color: #1561ad;">Антибактериальная обработка</h3>
-        <p style="margin-top: 10px; color: #444;">Гарантирует устранение бактерий и запахов.</p>
-        <strong style="display: block; margin-top: 12px; color: #1561ad;">Бесплатно</strong>
-      </div>
+    <div class="price-row">
+      <div><img src="img5.jpg" alt="">Шагги / Миллионник</div>
+      <div>700 тг / м²</div>
+      <div>800 тг / м²</div>
+    </div>
 
-      <!-- Card 5 -->
-      <div style="background: #ffffff; border-radius: 16px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); padding: 24px; width: 280px;">
-        <h3 style="font-size: 20px; color: #1561ad;">Ручная стирка деликатных ковров</h3>
-        <p style="margin-top: 10px; color: #444;">Для шёлковых, персидских и других ценных покрытий.</p>
-        <strong style="display: block; margin-top: 12px; color: #1561ad;">от 1000 тг/м²</strong>
-      </div>
-
-      <!-- Card 6 -->
-      <div style="background: #ffffff; border-radius: 16px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); padding: 24px; width: 280px;">
-        <h3 style="font-size: 20px; color: #1561ad;">Сушка ковров</h3>
-        <p style="margin-top: 10px; color: #444;">Бережная сушка в специальных камерах с контролем температуры.</p>
-        <strong style="display: block; margin-top: 12px; color: #1561ad;">Включено в стоимость</strong>
-      </div>
+    <div class="price-row">
+      <div><img src="img6.jpg" alt="">Ручная работа</div>
+      <div>1 400 тг / м²</div>
+      <div>1 400 тг / м²</div>
     </div>
   </div>
 </section>
+
 
     <section id="request-form" class="request-form">
   <div class="request-form__container">
@@ -235,30 +199,24 @@
 
 
 
-    <section id="contacts" class="contacts-section">
-  <div class="contacts-container">
-    <div class="contact-info">
-      <h2>КОНТАКТЫ</h2>
+    <section id="contacts" class="contact-section">
+  <div class="contact-card">
+    <h2>КОНТАКТЫ</h2>
+    <p><strong>Адрес</strong><br>	Рыскулова 149</p>
+    <p>Ташкентский тракт 16/1</p>
+    <p style="text-decoration: none;" ><strong>Телефон</strong><br><a style="text-decoration: none;" href="tel:+7(777)807-73-37">+7(777)807-73-37</a></p>
+    <p><strong>График работы</strong><br>Пн-Вс: 07:00—22:00</p>
+    <p><strong>Мессенджеры</strong><br>
+      <a style="text-decoration: none;" href="#">Instagram</a> | <a style="text-decoration: none;" href="#">WhatsApp</a>
+    </p>
+  </div>
 
-      <p><strong>Адрес</strong><br>
-      Думан, Улица Тарбагатай 39, Алматы</p>
-
-      <p><strong>Телефон</strong><br>
-      <a href="tel:+77018319342">+7-701-831-93-42</a></p>
-
-      <p><strong>График работы</strong><br>
-      Пн-Вс : 07:00–22:00</p>
-
-      <p><strong>Мессенджеры</strong><br>
-        <a href="#"><img src="icons/instagram.svg" alt="Instagram" class="social-icon" /></a>
-        <a href="#"><img src="icons/whatsapp.svg" alt="WhatsApp" class="social-icon" /></a>
-      </p>
-    </div>
-
-    <div class="contact-map">
-      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A45d38f51e7fef4c7f71e5c2a524e8801b0c96cf74f9f660dfe9cbca0d45e345e&amp;source=constructor"
-        width="100%" height="100%" frameborder="0"></iframe>
-    </div>
+  <div class="map-container">
+    <iframe
+      src="https://yandex.ru/map-widget/v1/?um=constructor%3A...&amp;source=constructor"
+      frameborder="0"
+      allowfullscreen
+    ></iframe>
   </div>
 </section>
   </main>

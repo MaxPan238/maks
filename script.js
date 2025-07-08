@@ -1,41 +1,18 @@
+// === БУРГЕР-МЕНЮ ===
+const burger = document.getElementById('burger');
+const navMenu = document.getElementById('navMenu');
 
-// Бургер-меню
-function toggleMenu() {
-  const nav = document.getElementById("navMenu");
-  nav.classList.toggle("active");
-}
+burger.addEventListener('click', () => {
+  navMenu.classList.toggle('open');
+});
 
-// Галерея (горизонтальная прокрутка)
-function scrollGallery(direction) {
-  const slider = document.getElementById("gallerySlider");
-  const card = slider.querySelector(".gallery-card");
-  if (!card) return;
-  const cardWidth = card.offsetWidth + 20;
-  slider.scrollLeft += direction * cardWidth * 2;
-}
-
-// Отзывы (горизонтальная прокрутка)
-function scrollReviews(direction) {
-  const slider = document.getElementById("reviewsSlider");
-  const card = slider.querySelector(".review-card");
-  if (!card) return;
-  const cardWidth = card.offsetWidth + 20;
-  slider.scrollLeft += direction * cardWidth * 2;
-}
-function scrollReviews(direction) {
-  const slider = document.getElementById("reviewsSlider");
-  const card = slider.querySelector(".review-card");
-  if (!card) return;
-  const cardWidth = card.offsetWidth + 20;
-  slider.scrollLeft += direction * cardWidth;
-}
-  const burger = document.getElementById('burger');
-  const navMenu = document.getElementById('navMenu');
-
-  burger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
+document.querySelectorAll('.n-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    navMenu.classList.remove('open');
   });
-//Quiz
+});
+
+// === КВИЗ ===
 const questions = [
   {
     text: "Какой у вас ковер?",
@@ -138,7 +115,7 @@ nextBtn.addEventListener('click', () => {
         questions.map((q, i) => `❓ ${q.text}%0A✅ ${answers[i]}`).join('%0A') +
         `%0A👤 Имя: ${name}%0A📞 Телефон: ${phone}`;
 
-      const phoneNumber = "87077498423"; // например: 79876543210
+      const phoneNumber = "+77077498423";
       window.open(`https://wa.me/${phoneNumber}?text=${text}`, '_blank');
     } else {
       alert('Пожалуйста, заполните все поля.');
