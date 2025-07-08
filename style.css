@@ -269,7 +269,9 @@ background-color: #e14b1f;
   .price-row.header {
     display: none;
   }
-
+  .price-row p{
+    position: relative;
+  }
   .price-row img {
     width: 80px;
     height: auto;
