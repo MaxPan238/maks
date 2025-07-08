@@ -251,23 +251,47 @@ background-color: #e14b1f;
 /* 📱 Адаптация для мобильных */
 @media (max-width: 768px) {
   .price-table {
-    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 
   .price-row {
-    width: 600px; /* 👈 устанавливаем минимальную ширину строки */
-    min-width: 600px;
-    display: inline-grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   }
 
-  .price-table::-webkit-scrollbar {
-    height: 6px;
+  .price-row.header {
+    display: none; /* скрываем заголовок колонок */
   }
 
-  .price-table::-webkit-scrollbar-thumb {
-    background: #ccc;
-    border-radius: 4px;
+  .price-row img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .price-row > div {
+    text-align: center;
+    margin: 4px 0;
+    font-size: 16px;
+  }
+
+  .price-row > div:nth-child(2)::before {
+    content: "Самовывоз: ";
+    font-weight: bold;
+    color: #8ab427;
+  }
+
+  .price-row > div:nth-child(3)::before {
+    content: "Доставка: ";
+    font-weight: bold;
+    color: #8ab427;
   }
 }
 
