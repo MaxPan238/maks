@@ -248,38 +248,46 @@ background-color: #e14b1f;
   gap: 10px;
 }
 
-/* 📱 Адаптация для мобильных */
 @media (max-width: 768px) {
   .price-table {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
   }
 
   .price-row {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #fff;
+    text-align: center;
+    background: #ffffff;
     border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   }
 
   .price-row.header {
-    display: none; /* скрываем заголовок колонок */
+    display: none; /* скрываем шапку на мобилке */
   }
 
   .price-row img {
-    width: 60px;
+    width: 70px;
     height: auto;
     margin-bottom: 10px;
+    border-radius: 6px;
   }
 
-  .price-row > div {
-    text-align: center;
-    margin: 4px 0;
+  .price-row > div:nth-child(1) {
+    font-weight: 600;
     font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .price-row > div:nth-child(2),
+  .price-row > div:nth-child(3) {
+    font-size: 15px;
+    color: #222;
+    margin: 2px 0;
   }
 
   .price-row > div:nth-child(2)::before {
