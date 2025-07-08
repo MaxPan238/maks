@@ -192,6 +192,7 @@ background-color: #e14b1f;
 }
 
 /* PRICE LIST*/
+
 .price-list {
   font-family: "Segoe UI", sans-serif;
   padding: 40px 20px;
@@ -209,10 +210,10 @@ background-color: #e14b1f;
 .price-table {
   max-width: 900px;
   margin: 0 auto;
+  background: #1c77ac;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  background:#1c77ac;
 }
 
 .price-row {
@@ -220,11 +221,12 @@ background-color: #e14b1f;
   grid-template-columns: 2fr 1fr 1fr;
   align-items: center;
   padding: 20px;
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid #000;
+  color: #f7e6b6;
 }
 
 .price-row.header {
-  background-color:#1561ad;
+  background-color: #1561ad;
   color: #f7e6b6;
   font-weight: bold;
 }
@@ -233,156 +235,151 @@ background-color: #e14b1f;
   border-bottom: none;
 }
 
-.price-row img {
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
-  border-radius: 6px;
-  margin-right: 10px;
-  vertical-align: middle;
-}
-
-.price-row div:first-child {
+.price-row .service {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
+.price-row img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.pickup {
+  color: #f7e6b6;
+}
+
+.delivery {
+  color: #f7e6b6;
+}
+
+/* 📱 Адаптация под мобильные устройства */
 @media (max-width: 768px) {
-  .price-table {
-    background: transparent;
-    box-shadow: none;
+  .price-row.header {
+    display: none;
   }
 
   .price-row {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background: #ffffff;
-    color: #333;
-    border-radius: 16px;
+    background-color:  #1c77ac;
+    color: #f7e6b6;
     margin-bottom: 20px;
-    padding: 20px 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 20px;
   }
 
-  .price-row.header {
-    display: none; /* скрываем заголовки */
+  .price-row .service {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    margin-bottom: 10px;
   }
 
   .price-row img {
-    width: 100px;
-    height: auto;
-    margin-bottom: 10px;
-    border-radius: 8px;
+    width: 60px;
+    height: 60px;
   }
 
-  .price-row div:first-child {
-    font-size: 18px;
+  .pickup, .delivery {
     font-weight: bold;
-    margin-bottom: 15px;
-    display: block;
-    color: #444;
+    margin: 4px 0;
   }
 
-  .price-row div:nth-child(2),
-  .price-row div:nth-child(3) {
-    font-size: 16px;
-    color: #1c77ac;
-    font-weight: 600;
-  }
-
-  .price-row div:nth-child(2)::before {
+  .pickup::before {
     content: "Самовывоз: ";
-    font-weight: bold;
-    color: #8ab427;
+    color: #f7e6b6;
   }
 
-  .price-row div:nth-child(3)::before {
+  .delivery::before {
     content: "Доставка: ";
-    font-weight: bold;
-    color: #8ab427;
+    color: #f7e6b6;
   }
 }
-
 /* Отзывы */
-/* Секция отзывов */
-#reviews {
-  background: transparent;
-  padding: 4rem 1rem;
+
+.testimonials {
+  padding: 40px 20px;
+  background: url('bg.jpg') center/cover no-repeat;
+  text-align: center;
 }
 
-#reviews h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 2.5rem;
+.testimonials h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
   color: #1561ad;
 }
 
-/* Сетка отзывов */
-.reviews-wrapper {
+.testimonial-slider {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
 }
 
-/* Отключаем стрелки, если остались */
-.reviews-wrapper .arrow {
-  display: none;
-}
-
-/* Обёртка слайдера не нужна */
-.reviews-slider {
-  display: contents;
-}
-
-/* Карточка отзыва */
-.review-card {
-  background: #ffffff;
+/* Одна карточка */
+.testimonial {
+  background: white;
   border-radius: 20px;
-  padding: 2rem 1.5rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
-  text-align: center;
-  transition: all 0.3s ease;
-  position: relative;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #1a1a1a;
+  transition: transform 0.3s;
 }
 
-.review-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+.testimonial:hover {
+  transform: translateY(-5px);
 }
 
-/* Фото пользователя */
-.review-card img {
+.testimonial img {
   width: 80px;
   height: 80px;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid #ddd;
-  margin-bottom: 1rem;
+  margin-bottom: 15px;
 }
 
-/* Текст отзыва */
-.review-card p {
-  font-size: 1rem;
-  color: #444;
+.testimonial p {
   font-style: italic;
-  margin-bottom: 1rem;
-  line-height: 1.6;
+  margin-bottom: 10px;
 }
 
-/* Имя пользователя */
-.review-card h4 {
-  font-size: 1.1rem;
+.testimonial h4 {
   color: #f7e6b6;
-  font-weight: 600;
-  margin: 0;
+  font-weight: bold;
+  font-size: 18px;
 }
 
+/* 📱 Мобильная версия — свайп */
+@media (max-width: 768px) {
+  .testimonial-slider {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px;
+  }
+
+  .testimonial-slider::-webkit-scrollbar {
+    display: none;
+  }
+
+  .testimonial {
+    flex: 0 0 85%;
+    max-width: 85%;
+    scroll-snap-align: start;
+  }
+}
 
 /* Форма */
 form {
@@ -655,10 +652,6 @@ footer {
 @media (max-width: 768px) {
 .gallery-card {
     flex: 0 0 100%;
-  }
-
-  .reviews-wrapper {
-    grid-template-columns: 1fr;
   }
 
   .request-form {
