@@ -539,7 +539,7 @@ footer {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 40px 20px;
-  background-color: #f9f9f9;
+  background-color:#1c77ac;
 }
 
 .contact-card {
@@ -547,7 +547,7 @@ footer {
   max-width: 500px;
   padding: 20px;
   font-family: Arial, sans-serif;
-  color: #1a1a1a;
+  color: #f7e6b6;
 }
 
 .contact-card p {
@@ -555,7 +555,7 @@ footer {
 }
 
 .contact-card a {
-  color: #1c77ac;
+  color: #f7e6b6;
 }
 
 .map-container {
