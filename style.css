@@ -37,7 +37,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: white;
+  color:#1561ad;
   font-family: Arial, sans-serif;
 }
 
@@ -248,15 +248,26 @@ background-color: #e14b1f;
   gap: 10px;
 }
 
-@media (max-width: 700px) {
-  .price-row {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 10px;
+/* 📱 Адаптация для мобильных */
+@media (max-width: 768px) {
+  .price-table {
+    overflow-x: auto;
   }
 
-  .price-row div:first-child {
-    justify-content: center;
+  .price-row {
+    width: 600px; /* 👈 устанавливаем минимальную ширину строки */
+    min-width: 600px;
+    display: inline-grid;
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+
+  .price-table::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .price-table::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
   }
 }
 
