@@ -252,52 +252,52 @@ background-color: #e14b1f;
   .price-table {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 20px;
   }
 
   .price-row {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px 15px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 16px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   }
 
   .price-row.header {
-    display: none; /* скрываем шапку на мобилке */
+    display: none;
   }
 
   .price-row img {
-    width: 70px;
+    width: 80px;
     height: auto;
     margin-bottom: 10px;
-    border-radius: 6px;
   }
 
   .price-row > div:nth-child(1) {
-    font-weight: 600;
-    font-size: 16px;
-    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #333;
   }
 
   .price-row > div:nth-child(2),
   .price-row > div:nth-child(3) {
-    font-size: 15px;
-    color: #222;
-    margin: 2px 0;
+    font-size: 16px;
+    margin: 4px 0;
+    font-weight: normal;
   }
 
   .price-row > div:nth-child(2)::before {
-    content: "Самовывоз: ";
+    content: "Самовывоз ";
     font-weight: bold;
     color: #8ab427;
   }
 
   .price-row > div:nth-child(3)::before {
-    content: "Доставка: ";
+    content: "Доставка ";
     font-weight: bold;
     color: #8ab427;
   }
