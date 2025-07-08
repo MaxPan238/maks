@@ -590,6 +590,8 @@ footer {
 
   .map-container iframe {
     min-height: 285px;
+    position: relative;
+    top: 10px;
   }
 }
 
