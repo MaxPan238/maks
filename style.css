@@ -264,6 +264,7 @@ background-color: #e14b1f;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
   }
 
   .price-row.header {
